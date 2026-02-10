@@ -14,6 +14,7 @@ body {
 h1 {
     font-family: "Ballet", cursive;
   color: var(--color-3);
+  text-align: center;
 }
 
 
