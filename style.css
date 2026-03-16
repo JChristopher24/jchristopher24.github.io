@@ -14,13 +14,13 @@ body {
 
 h1 {
     font-family: "Ballet", cursive;
-  color: var(--color-3);
+  color: var(--color-4);
   text-align: center;
 }
 
 h3 {
     font-family:'Petit Formal Script', cursive;
-    color: var(--color-4);
+    color: var(--color-3);
     text-align: left;
 }
 
@@ -65,3 +65,4 @@ nav a:hover {
     padding: 20px;
     border-radius: 20px;
 }
+
