@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Jim+Nightshade&family=Lovers+Quarrel&family=Merienda:wght@300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Petit+Formal+Script&family=Playwrite+NZ+Basic:wght@100..400&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Jim+Nightshade&family=Lovers+Quarrel&family=Merienda:wght@300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Petit+Formal+Script&family=Playwrite+NZ+Basic:wght@100..400&family=Protest+Guerrilla&display=swap&family=Alkatra:wght@400..700');
 
 :root{
     --color-1: #30364F;
@@ -7,15 +7,35 @@
     --color-4: #F0F0DB;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: var(--color-4);
     background-color: var(--color-1);
 }
 
+a {
+    color: var(--color-2);
+    text-decoration: none;
+}
+
 h1 {
-    font-family: "Ballet", cursive;
-  color: var(--color-4);
-  text-align: center;
+    font-family: "Petit Formal Script", cursive;
+    color: var(--color-4);
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Alkatra', cursive;
+    color: var(--color-3);
 }
 
 h3 {
@@ -30,6 +50,7 @@ p {
     color: var(--color-3);
 }
 
+/* NAVBAR */
 nav {
     background-color: var(--color-3);
     text-align: center;
@@ -49,6 +70,107 @@ nav a:hover {
     color: var(--color-2);
     border-bottom: 1px solid var(--color-1);
 }
+
+/* HERO SECTION */
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 45px;
+}
+
+.hero-section .text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding : 5px 10px;
+    border: 2px solid var(--color-3);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .text .links a:hover {
+    color: var(--color-1);
+    border: 2px solid var(--color-1);
+}
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img {
+    width: 350px;
+    border-radius: 50%;
+}
+
+/* Skills SECTION */
+
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid var(--color-3);
+    border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+}
+
+
+
 
 .flt {
     display: flex;
@@ -71,4 +193,53 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+}
+
+@media (max-width: 850px) {
+    /* HERO SECTION */
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    /* HERO SECTION */
+    .hero-section {
+        flex-direction:column-reverse;
+        text-align: center;
+    }
+
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
+
+    .hero-section .text p {
+        font-size: 18px;
+    }
+
+    .hero-section .headshot img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* HERO SECTION */
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 25px;
+    }
+
+    /* Skills SECTION */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
+    }
+
+
 }
